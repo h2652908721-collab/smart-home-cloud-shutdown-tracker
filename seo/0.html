@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insteon 停服后智能家居设备还能用吗，本地控制改造方案 — 云档案库</title>
+<meta name="description" content="2022年Insteon突然关服,一觉醒来灯不亮、开关没反应——很多在澳洲买了Insteon全屋方案的朋友都经历过这个噩梦。设备本身没坏,坏的是云端服务器。好消息是:硬件还救得回来,而且改造后反而比原来更稳,不再靠任何公司的服务器活着。">
+<meta property="og:type" content="article"><meta property="og:title" content="Insteon 停服后智能家居设备还能用吗，本地控制改造方案 — 云档案库">
+<style>
+:root{--ink:#0d1b2a;--bg:#f5f8fb;--card:#fff;--teal:#0b7d73;--muted:#5a6b7b;--line:#e3eaf1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC",system-ui,sans-serif;color:var(--ink);
+background:var(--bg);line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:24px 20px 60px}
+.back{display:inline-block;color:var(--teal);text-decoration:none;font-size:.9rem;margin-bottom:20px}
+h1{font-size:clamp(1.5rem,1.2rem+2vw,2rem);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+.intro{font-size:1.08rem;color:#26323f;margin-bottom:8px}
+h2{font-size:1.15rem;margin:26px 0 6px;letter-spacing:-.01em}
+p{margin-bottom:6px;color:#2c3a47}
+.takeaway{background:#e3f4f1;border-left:3px solid var(--teal);border-radius:10px;
+padding:16px 18px;margin:28px 0;font-weight:600}
+.cta{display:block;text-align:center;background:linear-gradient(135deg,#0e9488,#0b7d73);
+color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;margin:24px 0}
+.disc{background:#fff8ec;border:1px solid #f4e3c1;color:#7a5c1e;border-radius:10px;
+padding:12px 14px;font-size:.82rem;line-height:1.6;margin-top:24px}
+footer{color:#8a98a6;font-size:.78rem;margin-top:20px;text-align:center}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← 回到 云档案库</a>
+<h1>Insteon 停服后智能家居设备还能用吗，本地控制改造方案</h1>
+<p class="intro">2022年Insteon突然关服,一觉醒来灯不亮、开关没反应——很多在澳洲买了Insteon全屋方案的朋友都经历过这个噩梦。设备本身没坏,坏的是云端服务器。好消息是:硬件还救得回来,而且改造后反而比原来更稳,不再靠任何公司的服务器活着。</p>
+<h2>为什么Insteon突然「死」了</h2><p>Insteon走的是云控制模式,App发命令→美国服务器→你家设备。公司2022年资金断裂直接关服,所有依赖云端的功能瞬间失效。澳洲用户更惨,本来延迟就高,关了就彻底没了。这件事最大的教训是:智能家居千万别把控制权交给别人的服务器。</p><h2>本地控制是什么意思</h2><p>本地控制就是命令直接在你家局域网里跑,不经过任何外部服务器。断网照样能开灯、跑自动化。Home Assistant是目前最主流的开源本地平台,装在一台树莓派或小主机上,所有逻辑都在本地跑,Insteon设备可以通过PLM(PowerLinc Modem)接入。</p><h2>Insteon改造需要什么硬件</h2><p>核心是一根Insteon PLM串口转USB的调制解调器,型号一般是2413U或2413S,二手市场还能找到。把它插到跑Home Assistant的主机上,配合官方的Insteon集成,原来的开关、调光器、运动传感器基本都能接管。具体兼容型号以Home Assistant官网文档为准,因为版本在迭代。</p><h2>实在懒得折腾,换设备更省心</h2><p>如果家里Insteon设备不多,或者PLM实在找不到,直接换成Zigbee或Z-Wave设备也是条路。这两个协议在Home Assistant里支持极好,澳洲本地JB Hi-Fi、Amazon AU都能买到兼容灯泡和开关。换掉的Insteon开关面板可以在eBay挂二手,部分买家专门收来做本地改造。</p><h2>在澳洲用Home Assistant要注意什么</h2><p>澳洲电压是230V、插头是Type I,买智能开关一定要认准澳标或有宽压认证,这点和国内、北美都不同。Home Assistant本身免费开源,但如果买官方的Home Assistant Green或Yellow主机会省去很多折腾。网络稳定性建议用有线网口接主机,Wi-Fi跑自动化偶尔会抖。</p>
+<div class="takeaway">👉 行动第一步:先去Home Assistant官网搜「Insteon integration」,看看你手上的设备型号在不在支持列表里,再决定是买PLM改造还是直接换新设备——这一步免费,花20分钟能省掉很多冤枉钱。</div>
+<a class="cta" href="../index.html#join">想要完整避坑清单 + 内测?点这里 →</a>
+<div class="disc">⚠️ 本文为面向在澳华人的经验参考,非移民法律意见。具体政策、分数、费用、条款以官方(immi.homeaffairs.gov.au)及持牌移民代理/律师为准。</div>
+<footer>© 云档案库</footer>
+</div></body></html>

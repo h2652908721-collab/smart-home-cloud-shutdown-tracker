@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>智能家居设备云服务停了怎么办，本地改造成本与教程 — 云档案库</title>
+<meta name="description" content="买了一堆智能插座、摄像头、门锁，某天打开 App 发现服务器停了，设备变砖——这种事在澳洲越来越常见。不少国内品牌悄悄撤出海外市场，或者直接倒闭，留下一屋子哑巴设备。这篇文章不是让你扔掉它们，而是教你用本地化方案把控制权拿回来。">
+<meta property="og:type" content="article"><meta property="og:title" content="智能家居设备云服务停了怎么办，本地改造成本与教程 — 云档案库">
+<style>
+:root{--ink:#0d1b2a;--bg:#f5f8fb;--card:#fff;--teal:#0b7d73;--muted:#5a6b7b;--line:#e3eaf1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC",system-ui,sans-serif;color:var(--ink);
+background:var(--bg);line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:24px 20px 60px}
+.back{display:inline-block;color:var(--teal);text-decoration:none;font-size:.9rem;margin-bottom:20px}
+h1{font-size:clamp(1.5rem,1.2rem+2vw,2rem);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+.intro{font-size:1.08rem;color:#26323f;margin-bottom:8px}
+h2{font-size:1.15rem;margin:26px 0 6px;letter-spacing:-.01em}
+p{margin-bottom:6px;color:#2c3a47}
+.takeaway{background:#e3f4f1;border-left:3px solid var(--teal);border-radius:10px;
+padding:16px 18px;margin:28px 0;font-weight:600}
+.cta{display:block;text-align:center;background:linear-gradient(135deg,#0e9488,#0b7d73);
+color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;margin:24px 0}
+.disc{background:#fff8ec;border:1px solid #f4e3c1;color:#7a5c1e;border-radius:10px;
+padding:12px 14px;font-size:.82rem;line-height:1.6;margin-top:24px}
+footer{color:#8a98a6;font-size:.78rem;margin-top:20px;text-align:center}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← 回到 云档案库</a>
+<h1>智能家居设备云服务停了怎么办，本地改造成本与教程</h1>
+<p class="intro">买了一堆智能插座、摄像头、门锁，某天打开 App 发现服务器停了，设备变砖——这种事在澳洲越来越常见。不少国内品牌悄悄撤出海外市场，或者直接倒闭，留下一屋子哑巴设备。这篇文章不是让你扔掉它们，而是教你用本地化方案把控制权拿回来。</p>
+<h2>为什么云服务会突然停掉</h2><p>绝大多数消费级智能家居设备靠厂商的云服务器中转指令，你手机发出的「开灯」命令，其实先飞去厂商服务器再回来。一旦厂商停止运营、砍掉海外服务区、或者被收购，这条链就断了。澳洲用户还有个额外风险：部分国内小品牌根本没有本地化计划，停服比国内还早。</p><h2>先查设备能不能本地化</h2><p>不是所有设备都值得救。第一步去搜设备型号加「Home Assistant」或者「local control」，看有没有人成功过。支持 Zigbee、Z-Wave 协议的设备最好改，Wi-Fi 设备要看有没有本地 API 或者能不能刷第三方固件（比如 Tasmota、ESPHome）。如果网上找不到任何成功案例，坦白讲，可以考虑直接换。</p><h2>Home Assistant 是最稳的出路</h2><p>Home Assistant 是开源的本地智能家居平台，装在树莓派或者旧电脑上，所有数据留在家里不经过任何云服务器。社区里有大量现成的集成插件，Zigbee 设备配一个几十澳元的 USB 协调器就能直接接入。初次配置需要一两个下午，但配好之后稳定性比原厂 App 强很多，断网也照样能用。</p><h2>改造大概要花多少</h2><p>硬件方面，树莓派 4 加外壳加存储卡的具体价格随市场波动，建议上 Officeworks 或 Amazon AU 当场比价。Zigbee USB 协调器价格以实时市场为准。如果设备支持直接本地 API 就不用买额外硬件。时间成本才是大头：查文档、试错、调自动化，第一次上手预计花半天到一天。</p><h2>几个容易踩的坑</h2><p>刷固件有变砖风险，一定要先在非重要设备上试，做好无法恢复的心理准备。部分设备的本地控制功能被厂商用 OTA 升级悄悄关掉了，买二手设备时要先确认固件版本。还有一点：改造后原厂 App 通常就用不了了，家里其他人要一起学新界面，否则容易引发家庭矛盾。</p>
+<div class="takeaway">👉 今晚花十分钟把家里每个智能设备的品牌型号记下来，逐个搜「型号加 Home Assistant」，看哪些能救、哪些该换，优先动手那台最让你焦虑的设备。</div>
+<a class="cta" href="../index.html#join">想要完整避坑清单 + 内测?点这里 →</a>
+<div class="disc">⚠️ 本文为面向在澳华人的经验参考,非移民法律意见。具体政策、分数、费用、条款以官方(immi.homeaffairs.gov.au)及持牌移民代理/律师为准。</div>
+<footer>© 云档案库</footer>
+</div></body></html>
